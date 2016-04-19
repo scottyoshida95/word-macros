@@ -1,4 +1,4 @@
-Sub Macro1()
+Sub MainBodyIEEE()
 '
 ' Macro1 Macro
 '
@@ -10,7 +10,7 @@ Sub Macro1()
         End If
         .NameFarEast = ""
     End With
-    With ActiveDocument.PageSetup
+    With ActiveDocument.PageSetup # params for the page setup
         .LineNumbering.Active = False
         .Orientation = wdOrientPortrait
         .TopMargin = InchesToPoints(0.75)
@@ -36,7 +36,7 @@ Sub Macro1()
         .BookFoldPrintingSheets = 1
         .GutterPos = wdGutterPosLeft
     End With
-    With Selection.ParagraphFormat
+    With Selection.ParagraphFormat # params for the paragraph format
         .LeftIndent = InchesToPoints(0)
         .RightIndent = InchesToPoints(0)
         .SpaceBefore = 0
